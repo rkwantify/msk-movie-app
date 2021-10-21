@@ -1,4 +1,4 @@
-import { useEffect, useRef, MutableRefObject, FunctionComponent } from 'react';
+import { useEffect, useRef, MutableRefObject } from 'react';
 import { createPortal } from 'react-dom';
 
 const modalRoot = document.getElementById('portal');

@@ -8,11 +8,7 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [movieInfo, setMovieInfo] = useState<MovieDetailsInterface>();
   const { setIsOpenModal, selectedMovieId } = useContext(MovieContext);
-  // console.log('cast', getMovieCast(selectedMovieId));
-  // console.log('x', getMovieDetailsAndCast(selectedMovieId));
-  // const { response, isLoading, error } = useFetch<IMovieDetails>(
-  //   `${BASE_URL}/movie/${selectedMovieId}?api_key=de1b14bbc00f482ef90cce7ebe581bdd`
-  // );
+
   useEffect(() => {
     (async () => {
       try {
@@ -30,12 +26,6 @@ const MovieDetails = () => {
       }
     })();
   }, [selectedMovieId]);
-
-  // getMovieDetails(selectedMovieId);
-
-  // useEffect(() => {
-  //   console.log('response', response);
-  // }, [response]);
 
   if (isLoading) return <h1>Loading...</h1>;
   return (

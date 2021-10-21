@@ -12,7 +12,7 @@ const Search = () => {
     setIsLoading(true);
     (async () => {
       try {
-        // if (searchQuery === '') return;
+        if (searchQuery === '') return;
         const results = await fetch(
           searchMovies(searchQuery)
         );

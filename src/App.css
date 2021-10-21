@@ -5,12 +5,8 @@
 }
 
 nav {
-  /* height: 64px; */
-  /* min-height: 64px; */
   display: flex;
-  /* color: #758582; */
   color: #758582;
-  /* border: 3px solid yellow; */
 }
 .nav-link {
   cursor: pointer;
@@ -19,7 +15,6 @@ nav {
 
 .navlink {
   text-decoration: none;
-  /* color: yellow; */
   color: #758582;
   padding: 0.5em 1em;
   border-bottom: 3px solid #000000;
@@ -30,8 +25,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* border: 1px solid orange; */
-  /* flex: 1; */
 }
 
 @media only screen and (max-width: 320px) {
