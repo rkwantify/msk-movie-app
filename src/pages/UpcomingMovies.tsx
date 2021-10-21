@@ -6,7 +6,7 @@ import MovieList from '../components/MovieList';
 import { MovieContext } from '../context/MovieContext';
 
 const UpcomingMovies = () => {
-  const { setMovies, isOpenModal, setIsLoading} = useContext(MovieContext);
+  const { setMovies, isOpenModal, setIsLoading, isLoading } = useContext(MovieContext);
 
   useEffect(() => {
     setIsLoading(true);
@@ -15,7 +15,7 @@ const UpcomingMovies = () => {
         const response = await fetch(getUpcomingMovies());
         const data = await response.json();
         setMovies(data.results);
-
+        setIsLoading(false);
       } catch(error) {
         console.error(error);
         setIsLoading(false);
@@ -30,7 +30,7 @@ const UpcomingMovies = () => {
           <MovieDetails />
         </Modal>
       ) : null}
-      <MovieList />
+      {isLoading ? <h1>Loading...</h1> : <MovieList />}
     </>
   );
 };
